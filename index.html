@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+ <head>
+	<script src="AnimCube3.js"></script>
+<link rel="stylesheet" href="stylesheet.css"></link>
+
+ </head>
+<body>
+<div>
+	<div class="header">
+		<div class="fullLogo">
+		<div class="imageContainer" onClick="window.location.href='https://kubing.no'">
+				<img src="images/NKF_Logo_trans.png" class="Logo" alt="Logo">
+		</div>
+		<a class="logoName">Norges Kubeforbund</a>
+		</div>
+		<div class="linkContainer">
+			<a href="https://kubing.no/Guider" class="backLink">Tilbake til Guider</a>
+		</div>
+	</div>
+	<div class="content">
+	<div>
+		<h1>1. Det hvite krysset</h1>
+		<div><p>		
+			La oss begynne med den hvite siden. Først må vi lage et hvitt kryss og
+			ta hensyn til fargen på sidens midtbrikker. Dette trinnet er ganske intuitivt
+			fordi det ikke er noen løste brikker å passe på. Du kan få det til ganske
+			enkelt med litt trening. Bare flytt de hvite kantene til plassene deres uten
+			å rote til de bitene som allerede er løste.
+		</p></div>
+		<div>
+			<div style="float:left; width: 50%">
+				Dette er et korrekt kryss
+				<div style="width:100%; height:300px">
+					<script>AnimCube3("bgcolor=cccccc&buttonbar=0&edit=0&initrevmove=#&facelets=*w*www*w*****y*******gg*******bb*****o**o*******rr****")</script>
+				</div>
+			
+			</div>
+			<div style="float:left; width: 50%;">
+				Dette er ikke et korrekt kryss
+				<div style="width:100%; height:300px">
+					<script>AnimCube3("bgcolor=cccccc&buttonbar=0&edit=0&initrevmove=#&facelets=*w*www*w*****y*******rg*******bb*****o**o*******gr****")</script>
+				</div>
+				
+		</div>
+	 </div>
+	 <div>
+		<p>
+			Vær oppmerksom på at det er de midterste bitene på hver side som
+			bestemmer hele fargen til resten av siden. Dette betyr at begge fargene
+			til kryssbitene matcher fargene til midtbitene de står ved siden av.
+		</p>
+	 </div>
+
+	</div>
+
+	<div>
+		<h1>2. De hvite hjørnene</h1>
+		<p>
+			I dette trinnet må vi løse alle de hvite hjørnebitene for å fullføre den
+			første siden. For noen er dette trinnet intuitivt og de kan gjøre det uten å
+			lære en eneste algoritme. Dersom dette er vanskelig finnes det en fast
+			måte, Hold krysset på toppen av kuben og se etter hvite hjørner som ligger i
+			bunnen av kuben. Når du har funnet en hjørnebit med hvit på seg må du
+			identifisere de andre fargene på biten. Hvis biten består av hvit, grønn
+			og rød, skal du snu bunnen slik at hjørnet står på undersiden mellom
+			den grønne og røde siden.
+		</p>
+
+		<div style="width:50%; height:300px" class="singleAlg">
+			<script>AnimCube3("bgcolor=cccccc&movetext=2&buttonheight=25&edit=0&initrevmove=#&facelets=wwwwwwwww****y****g**gg*g**b**bb*b**ooo*o****r**rr*r**&move=R'D'RD")</script>
+		</div>
+		<p>
+			Så lenge hjørnebiten du jobber med er endten plassert på riktig plass eller rett under plassen sin når du starter algoritmen, kan du gjøre algoritmen igjen og igjen, helt til hjørebiten er løst.
+		</p>
+		<p>
+			Når den hvite siden er ferdig skal rammen med farger rundt den hvite siden også være løst.
+		</p>
+
+	 </div>
+
+	 <div>
+		<h1>3. Det andre laget</h1>
+		<p>
+			Til dette punktet var prosedyren ganske rett frem, men fra nå av må vi
+			bruke algoritmer. Vi kan glemme den løste siden, så la oss snu kuben
+			opp ned for å fokusere på den uløste siden.
+		</p><p>
+			I dette trinnet fullfører vi de to første lagene (F2L). Det er to symmetriske
+			algoritmer vi må bruke i dette trinnet. De kalles høyre- og venstrealgoritmer.
+			 Disse algoritmene setter inn den fremste kantbiten fra det
+			øverste laget til det midtre laget, uten å blande den løste siden.
+			</p><p>
+			Se etter en kantbit i det øverste laget som ikke har gul på seg. Sett opp kantbiten slik som vist på en av animasjonene.
+			(Biten skal settes opp slik at fargen som ikke peker mot toppen skal
+			matche midtbrikken som står under.)
+			Hvis biten skal til venstre gjør du venstealgoritmen. Hvis biten skal til
+			høyre gjør du høyrealgoritmen.
+		</p>
+
+		<div>
+
+			<div style="float:left; width:50%; height:300px">
+				<script>AnimCube3("bgcolor=cccccc&movetext=2&buttonheight=25&edit=0&initmove=y2&initrevmove=#&facelets=wwwwwwwww****y****gg*gg*gg*bb*bb*bb*oooooo***rr*rr*rr*&move=U'L'ULUFU'F'&repeat=0&position=lldd")</script>
+			</div>
+
+			<div style="float:left; width:50%; height:300px">
+				<script>AnimCube3("bgcolor=cccccc&movetext=2&buttonheight=25&edit=0&initmove=y2&initrevmove=#&facelets=wwwwwwwww****y****gg*gg*gg*bb*bb*bb*oooooo***rr*rr*rr*&move=URU'R'U'F'UF&repeat=0")</script>
+			</div>
+
+		</div>
+
+	 </div>
+
+	 <div>
+		<h1>4. Det gule krysset</h1>
+		<p>Vi skal lage det gule krysst på den øverste siden av kuben. Her tenker vi ikke på hjørnene, så du kan ignorere de. Vi har fire mulige mønstre på toppen:</p>
+		<div style="width:100%">
+		<img src="images/step4.jpg" style="width:100%;height:100%">
+		</div>
+		<p>Roter topplaget slik at mønsteret du har peker samme vei som vist på bildet. Den gule siden skal fortsatt være på toppen av kuben. Deretter gjør følgende algoritme til krysset er løst.</p>
+
+	 <div style="width:50%; height:300px" class="singleAlg">
+		<script>AnimCube3("bgcolor=cccccc&movetext=2&buttonheight=25&edit=0&initmove=y2&initrevmove=#&facelets=wwwwwwwww*y*yyy*y*gg*gg*gg*bb*bb*bb*oooooo***rr*rr*rr*&move=FRUR'U'F'&repeat=0")</script>
+	 </div>
+	 </div>
+
+	 <div>
+		<h1>5. De gule kantene</h1>
+
+		<p>
+			Etter å ha laget det gule krysset på toppen av kuben, må du plassere de
+			gule kantbrikkene på deres endelige plasser for å matche fargene på
+			sidens midtstykker. Du roterer det øverte laget frem til to kanter har matchende farge med senterbiten på siden. Det vil alltid være to eller fire farger som matcher, så let frem til du finner en match.
+		</p>
+		<p>
+			Når du har plasert to kanbrikker slik at de matcher, roterer du kuben slik at du har en som stemmer til høyre for deg og en som ikke stemmer fremfor deg, slik som animasjonen viser.
+		</p>
+
+	 <div style="width:50%; height:300px" class="singleAlg">
+		<script>AnimCube3("bgcolor=cccccc&movetext=2&buttonheight=25&edit=0&initmove=y2&initrevmove=#&facelets=wwwwwwwww*y*yyy*y*gg*ggggg*bb*bbbbb*oooooo*o*rr*rrrrr*&move=RUR'URU2R'U&repeat=0")</script>
+	 </div>
+
+
+
+
+	 </div>
+
+	 <div>
+		<h1>6. Gule hjørner på riktig plass</h1>
+
+			<p>
+				Nå er det kun hjørnene i det siste laget som gjenstår. Først skal vi få de på rett plass, ikke bekymre deg for rotasjonen de har i dette steget.
+			</p><p>
+				Finn en brikke som allerede er på rett sted,
+				hold kuben slik at brikken som er på rett
+				plass står foran og til høyre. (Hvis ingen brikker
+				er på riktig plass kan du bare gjøre algoritmen).
+				Bruk så denne algoritmen for bytte plasser på
+				de andre hjørnene:
+			</p>
+
+	 <div style="width:50%; height:300px" class="singleAlg">
+		<script>AnimCube3("bgcolor=cccccc&movetext=2&buttonheight=25&edit=0&initmove=y2&initrevmove=#&facelets=wwwwwwwwwoybyyygyyggygggggrbbbbbbbbooooooogoyrryrrrrrr&move=URU'L'UR'U'L&repeat=0")</script>
+	 </div>
+	 </div>
+
+	 <div>
+		<h1>7. Rotere de gule hjørnene</h1>
+		<p>
+			Når alle hjørnene er på riktig plass gjenstår det bare å rotere dem slik at
+			de peker rett vei. Algoritmen for å gjøre dette er enkel, men dette er
+			allikevel det mest forvirrende steget. Så les instruksjonene nøye.
+			Hold kuben slik at hjørnet som ikke er rotert korrekt er øverst til høyre. Deretter gjør algoritmen.
+		</p>
+		<p>
+			Algoritmen er R' D' R D 
+		</p>
+			Gjør algoritmen to eller fire ganger frem til hjørnet er løst.
+		<p>
+			Når det første hjørnet er rotert korrekt skal vi vri på det øverste laget slik at en ny hjørebit som ikke er rotert riktig tar plassen til den ferdig roterte hjørnet. 
+			<b>IKKE ROTER HELE KUBEN, BARE ROTER TOPPLAGET!</b>
+		</p>
+		<p>
+			Fortsett med disse stegene frem til alle hjørnene er rotert korrekt.
+		</p>
+		<p>
+			I denne animasjonen ser du at algoritmen blir gjort to ganger for å rotere det fremste hjørnet. 
+			Når hjørnet er ferdig rotert, blir hjørnebiten flyttet til siden, og en ny hjørnebit tar plassen. 
+			Algoritmen gjøres to ganger til, og den nye hjørnebiten er rotert.
+			Dette skjer en gang til, og når alle hjørnene er rotert, er det bare å justere topplaget for å fulføre kuben.
+		</p>
+
+		<div style="width:50%; height:300px" class="singleAlg">
+			<script>AnimCube3("bgcolor=cccccc&movetext=2&buttonheight=25&edit=0&initmove=y2&initrevmove=#&move=R'D'RDR'D'RDUR'D'RDR'D'RDUR'D'RDR'D'RDU2&repeat=0")</script>
+		 </div>
+
+
+
+		</div>
+		</div>
+
+</div>
+
+ </body>
+</html>
